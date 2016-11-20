@@ -25,4 +25,7 @@ RUN cd /go/src/github.com/hloeffler/gozim && sed -i \ 's,github.com/akhenakh/goz
 RUN go install github.com/hloeffler/gozim/cmd/gozimhttpd
 RUN cd /go/src/github.com/hloeffler/gozim/cmd/gozimhttpd && go build && rice append --exec gozimhttpd
 
+RUN go get github.com/hloeffler/gozim/cmd/gozimindex
+RUN go install github.com/hloeffler/gozim/cmd/gozimindex
+
 CMD [ "bash" ]
