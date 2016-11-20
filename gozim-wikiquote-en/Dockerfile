@@ -33,5 +33,4 @@ RUN mkdir /zim && cd /zim && wget http://download.kiwix.org/zim/wikiquote/wikiqu
 RUN mkdir /index
 RUN /go/bin/gozimindex -path /zim/1.zim -index /index
 
-#CMD [ "bash" ]
 CMD [ "/go/src/github.com/hloeffler/gozim/cmd/gozimhttpd/gozimhttpd","-path", "/zim/1.zim", "-port", "8888", "-index", "/index" ]
